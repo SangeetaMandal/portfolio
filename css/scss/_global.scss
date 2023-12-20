@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  --bem-HeadingFF: "Montserrat", sans-serif;
+  --bem-BodyFF: "Lato", sans-serif;
+  --bem-Green: hsl(154, 50%, 35%);
+  --bem-DarkBlue: hsl(184, 96%, 27%);
+  --bem-LightViolet: hsl(252, 100%, 93%);
+  --bem-LightTeal: hsl(144, 78%, 81%);
+  --bem-Teal: hsl(159, 73%, 62%);
+  --bem-Black: hsl(0, 0%, 16%);
+  --bem-DarkGrey1: hsl(0, 0%, 24%);
+  --bem-DarkGrey2: hsl(0, 0%, 60%);
+  --bem-LightGrey1: hsl(0, 0%, 77%);
+  --bem-LightGrey2: hsl(0, 0%, 95%);
+  --bem-White: hsl(0, 0%, 100%);
+  --bem-LightFW: 300;
+  --bem-RegularFW: 400;
+  --bem-MediumFW: 500;
+  --bem-SemiboldFW: 600;
+  --bem-BoldFW: 700;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  @include toRem(font-size, 16);
+  font-family: var(--bem-BodyFF);
+  color: var(--bem-Black);
+  font-weight: var(--bem-RegularFW);
+  line-height: 1.4;
+  text-decoration: none;
+}
+body {
+  @include toRem(font-size, 16);
+  background-color: var(--bem-White);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--bem-HeadingFF);
+  font-weight: var(--bem-SemiboldFW);
+  @include toRem(padding-block-end, 15);
+}
+p {
+  font-family: var(--bem-BodyFF);
+  font-weight: var(--bem-RegularFW);
+  @include toRem(padding-block-end, 15);
+}
+ul,
+li,
+a,
+span {
+  font-family: var(--bem-BodyFF);
+  font-weight: var(--bem-RegularFW);
+}
+img {
+  max-inline-size: 100%;
+  display: block;
+}

@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  --bem-HeadingFF: "Montserrat", sans-serif;
+  --bem-BodyFF: "Lato", sans-serif;
+  --bem-Green: hsl(154, 50%, 35%);
+  --bem-DarkBlue: hsl(184, 96%, 27%);
+  --bem-LightViolet: hsl(252, 100%, 93%);
+  --bem-LightTeal: hsl(144, 78%, 81%);
+  --bem-Teal: hsl(159, 73%, 62%);
+  --bem-Black: hsl(0, 0%, 16%);
+  --bem-DarkGrey1: hsl(0, 0%, 24%);
+  --bem-DarkGrey2: hsl(0, 0%, 60%);
+  --bem-LightGrey1: hsl(0, 0%, 77%);
+  --bem-LightGrey2: hsl(0, 0%, 95%);
+  --bem-White: hsl(0, 0%, 100%);
+  --bem-LightFW: 300;
+  --bem-RegularFW: 400;
+  --bem-MediumFW: 500;
+  --bem-SemiboldFW: 600;
+  --bem-BoldFW: 700;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-family: var(--bem-BodyFF);
+  color: var(--bem-Black);
+  font-weight: var(--bem-RegularFW);
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+body {
+  font-size: 1rem;
+  background-color: var(--bem-White);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--bem-HeadingFF);
+  font-weight: var(--bem-SemiboldFW);
+  padding-block-end: 0.9375rem;
+}
+
+p {
+  font-family: var(--bem-BodyFF);
+  font-weight: var(--bem-RegularFW);
+  padding-block-end: 0.9375rem;
+}
+
+ul,
+li,
+a,
+span {
+  font-family: var(--bem-BodyFF);
+  font-weight: var(--bem-RegularFW);
+}
+
+img {
+  max-inline-size: 100%;
+  display: block;
+}
+
+.bem-portfolio {
+  --bem-HeadingFF: "Montserrat", sans-serif;
+  --bem-BodyFF: "Lato", sans-serif;
+  --bem-Green: hsl(154, 50%, 35%);
+  --bem-DarkBlue: hsl(184, 96%, 27%);
+  --bem-LightViolet: hsl(252, 100%, 93%);
+  --bem-LightTeal: hsl(144, 78%, 81%);
+  --bem-Teal: hsl(159, 73%, 62%);
+  --bem-Black: hsl(0, 0%, 16%);
+  --bem-DarkGrey1: hsl(0, 0%, 24%);
+  --bem-DarkGrey2: hsl(0, 0%, 60%);
+  --bem-LightGrey1: hsl(0, 0%, 77%);
+  --bem-LightGrey2: hsl(0, 0%, 95%);
+  --bem-White: hsl(0, 0%, 100%);
+  --bem-LightFW: 300;
+  --bem-RegularFW: 400;
+  --bem-MediumFW: 500;
+  --bem-SemiboldFW: 600;
+  --bem-BoldFW: 700;
+}
+.bem-portfolio__header {
+  background-color: var(--bem-Green);
+}
+.bem-portfolio__header--padding-blocks {
+  padding-block-start: 1.25rem;
+  padding-block-end: 1.25rem;
+}
+.bem-portfolio__blocks {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  inline-size: 100%;
+  max-inline-size: 75rem;
+}
+.bem-portfolio__blocks--fdcol {
+  flex-direction: column;
+}
+.bem-portfolio__logoimg {
+  max-height: 3.625rem;
+}
+.bem-portfolio__navul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5625rem;
+}
+.bem-portfolio__navli {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bem-portfolio__navlink {
+  font-weight: var(--bem-BoldFW);
+  color: var(--bem-White);
+  border-bottom: 1px solid transparent;
+}
+.bem-portfolio__navlink--select {
+  border-bottom: 1px solid var(--bem-White);
+}
+.bem-portfolio__buttonblack {
+  background-color: var(--bem-Black);
+  border: 2px solid var(--bem-Black);
+  block-size: 2.625rem;
+  padding-inline-start: 1.5625rem;
+  padding-inline-end: 1.5625rem;
+  border-radius: 1.5625rem;
+  display: flex;
+  flex-direction: row;
+  color: var(--bem-White);
+  line-height: 1;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--bem-BoldFW);
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.bem-portfolio__buttonblack:hover {
+  background-color: transparent;
+  color: var(--bem-White);
+  border: 2px solid var(--bem-White);
+}
+.bem-portfolio__buttonblack--borderb:hover {
+  background-color: var(--bem-Green);
+  border: 2px solid var(--bem-Green);
+}
+.bem-portfolio__buttonwhiteborder {
+  background-color: transparent;
+  border: 2px solid var(--bem-White);
+  block-size: 2.625rem;
+  padding-inline-start: 1.5625rem;
+  padding-inline-end: 1.5625rem;
+  border-radius: 1.5625rem;
+  display: flex;
+  flex-direction: row;
+  color: var(--bem-White);
+  line-height: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.bem-portfolio__buttonwhiteborder:hover {
+  background-color: var(--bem-Black);
+  color: var(--bem-White);
+  border: 2px solid var(--bem-Black);
+}
+.bem-portfolio__banner {
+  background-color: var(--bem-Green);
+}
+.bem-portfolio__bannercaption {
+  flex: 0 1 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5625rem;
+}
+.bem-portfolio__bannerimg {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: center;
+}
+.bem-portfolio__heading1 {
+  font-size: 3rem;
+}
+.bem-portfolio__heading1--white {
+  color: var(--bem-White);
+}
+.bem-portfolio__heading1--black {
+  color: var(--bem-black);
+}
+.bem-portfolio__heading2 {
+  font-size: 2.5rem;
+}
+.bem-portfolio__heading2--white {
+  color: var(--bem-White);
+}
+.bem-portfolio__heading2--black {
+  color: var(--bem-black);
+}
+.bem-portfolio__heading2--textcenter {
+  text-align: center;
+}
+.bem-portfolio__heading3 {
+  font-size: 2rem;
+}
+.bem-portfolio__heading3--white {
+  color: var(--bem-White);
+}
+.bem-portfolio__heading3--black {
+  color: var(--bem-black);
+}
+.bem-portfolio__heading4 {
+  font-size: 1.5rem;
+}
+.bem-portfolio__heading4--white {
+  color: var(--bem-White);
+}
+.bem-portfolio__heading4--black {
+  color: var(--bem-black);
+}
+.bem-portfolio__heading5 {
+  font-size: 1.25rem;
+}
+.bem-portfolio__heading5--white {
+  color: var(--bem-White);
+}
+.bem-portfolio__heading5--black {
+  color: var(--bem-black);
+}
+.bem-portfolio__heading6 {
+  font-size: 1rem;
+}
+.bem-portfolio__heading6--white {
+  color: var(--bem-White);
+}
+.bem-portfolio__heading6--black {
+  color: var(--bem-black);
+}
+.bem-portfolio__paragraph {
+  font-size: 1rem;
+}
+.bem-portfolio__paragraph--white {
+  color: var(--bem-White);
+}
+.bem-portfolio__paragraph--black {
+  color: var(--bem-black);
+}
+.bem-portfolio__paragraph--mb30 {
+  padding-block-end: 1.875rem;
+}
+.bem-portfolio__paragraph--p0 {
+  padding: 0rem;
+}
+.bem-portfolio__paragraph--bold {
+  font-weight: var(--bem-BoldFW);
+}
+.bem-portfolio__paragraph--textcenter {
+  text-align: center;
+}
+.bem-portfolio__img--inlinesize100 {
+  inline-size: 100%;
+}
+.bem-portfolio__banner, .bem-portfolio__workwrap, .bem-portfolio__aboutwrap, .bem-portfolio__skillwrap, .bem-portfolio__contactwrap {
+  margin-block-end: 2.5rem;
+}
+.bem-portfolio__workinner {
+  display: flex;
+  flex-direction: row;
+  inline-size: 100%;
+  padding: 1.875rem;
+  gap: 1.875rem;
+}
+.bem-portfolio__workinner--lightgrey2 {
+  background-color: var(--bem-LightGrey2);
+}
+.bem-portfolio__workinner--teal {
+  background-color: var(--bem-Teal);
+}
+.bem-portfolio__workinner--col {
+  flex-direction: column;
+}
+.bem-portfolio__worksampleimg {
+  flex: 0 0 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+.bem-portfolio__workthumbimg {
+  block-size: auto;
+}
+.bem-portfolio__worksamplerightimg {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.bem-portfolio__buttonwrap {
+  display: flex;
+  justify-content: flex-start;
+}
+.bem-portfolio__about {
+  background-color: var(--bem-DarkBlue);
+  padding-inline-start: 1.875rem;
+  padding-inline-end: 10.625rem;
+  padding-block-start: 1.875rem;
+  padding-block-end: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+  flex: 0 0 914px;
+}
+.bem-portfolio__aboutimgwrap {
+  margin-inline-start: -10.625rem;
+}
+.bem-portfolio__aboutimg {
+  border: 10px solid var(--bem-DarkBlue);
+}
+.bem-portfolio__skillwrap {
+  background-color: var(--bem-LightViolet);
+  padding-block-start: 1.875rem;
+  padding-block-end: 1.875rem;
+}
+.bem-portfolio__skillset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+  justify-content: center;
+  padding-block-end: 1.875rem;
+}
+.bem-portfolio__skill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bem-White);
+  border: 2px solid var(--bem-Black);
+}
+.bem-portfolio__contactwrap {
+  background-color: var(--bem-LightTeal);
+  inline-size: 50rem;
+  padding: 1.875rem;
+  margin: 0 auto;
+  margin-block-end: 2.5rem;
+}
+.bem-portfolio__contactform {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+}
+.bem-portfolio__contactformrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-block-end: 1.25rem;
+  align-items: center;
+}
+.bem-portfolio__contactformrow--m0 {
+  margin-block-end: 0rem;
+}
+.bem-portfolio__contactformlabel {
+  flex: 0 0 90px;
+}
+.bem-portfolio__contactforminput {
+  flex: 0 0 calc(100% - 110px);
+  block-size: 2.5rem;
+  padding: 0.3125rem;
+  border: 1px solid var(--bem-LightGrey1);
+  outline: 0;
+}
+.bem-portfolio__contactforminput:hover, .bem-portfolio__contactforminput:focus, .bem-portfolio__contactforminput:active {
+  border: 1px solid var(--bem-Green);
+  background-color: var(--bem-LightGrey2) !important;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.bem-portfolio__contactforminput--bs100 {
+  block-size: 6.25rem;
+  resize: none;
+}
+.bem-portfolio__contactforminput--name {
+  background: #ffffff url(../images/user.png) no-repeat scroll 99% 50%;
+}
+.bem-portfolio__contactforminput--name:hover, .bem-portfolio__contactforminput--name:focus {
+  background: #ffffff url(../images/user-darkgrey.png) no-repeat scroll 99% 50%;
+}
+.bem-portfolio__contactforminput--email {
+  background: #ffffff url(../images/at.png) no-repeat scroll 99% 50%;
+}
+.bem-portfolio__contactforminput--email:hover, .bem-portfolio__contactforminput--email:focus {
+  background: #ffffff url(../images/at-darkgrey.png) no-repeat scroll 99% 50%;
+}
+.bem-portfolio__contactforminput--mobile {
+  background: #ffffff url(../images/call.png) no-repeat scroll 99% 50%;
+}
+.bem-portfolio__contactforminput--mobile:hover, .bem-portfolio__contactforminput--mobile:focus {
+  background: #ffffff url(../images/call-darkgrey.png) no-repeat scroll 99% 50%;
+}
+.bem-portfolio__contactforminput--subject {
+  background: #ffffff url(../images/terms.png) no-repeat scroll 99% 50%;
+}
+.bem-portfolio__contactforminput--subject:hover, .bem-portfolio__contactforminput--subject:focus {
+  background: #ffffff url(../images/terms-darkgrey.png) no-repeat scroll 99% 50%;
+}
+.bem-portfolio__contactforminput--message {
+  background: #ffffff url(../images/message.png) no-repeat scroll 99% 5%;
+}
+.bem-portfolio__contactforminput--message:hover, .bem-portfolio__contactforminput--message:focus {
+  background: #ffffff url(../images/message-darkgrey.png) no-repeat scroll 99% 5%;
+}
+.bem-portfolio__footer {
+  background-color: var(--bem-DarkBlue) !important;
+  padding-block-start: 1.25rem;
+  padding-block-end: 1.25rem;
+}
+.bem-portfolio__footerinner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  justify-content: center;
+  align-items: center;
+}
+.bem-portfolio__socialwrap {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.bem-portfolio__socialicon {
+  list-style: none;
+}
+.bem-portfolio__workthumbwrap {
+  display: flex;
+  flex-direction: row;
+  gap: 1.875rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.bem-portfolio__workthumbleft, .bem-portfolio__workthumbright {
+  gap: 1.875rem;
+  display: flex;
+  flex-direction: column;
+}
+.bem-portfolio__workpthumbimg {
+  border: 2px solid var(--bem-White);
+}
+.bem-portfolio__icon {
+  inline-size: 1.125rem;
+  block-size: 1.125rem;
+  display: flex;
+}
+.bem-portfolio__icon--download {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_442_6035)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.81903 16.5H12.181C12.7847 16.5 13.283 16.5 13.6889 16.4669C14.1104 16.4324 14.498 16.3585 14.862 16.173C15.4265 15.8854 15.8854 15.4265 16.173 14.862C16.3585 14.498 16.4324 14.1104 16.4669 13.6889C16.5 13.283 16.5 12.7847 16.5 12.181V11.25C16.5 10.8358 16.1642 10.5 15.75 10.5C15.3358 10.5 15 10.8358 15 11.25V12.15C15 12.7924 14.9994 13.2292 14.9718 13.5667C14.945 13.8955 14.8963 14.0637 14.8365 14.181C14.6927 14.4632 14.4632 14.6927 14.181 14.8365C14.0637 14.8963 13.8955 14.945 13.5667 14.9718C13.2292 14.9994 12.7924 15 12.15 15H5.85C5.20757 15 4.77085 14.9994 4.43328 14.9718C4.10447 14.945 3.93631 14.8963 3.81902 14.8365C3.53677 14.6927 3.3073 14.4632 3.16349 14.181C3.10372 14.0637 3.05503 13.8955 3.02816 13.5667C3.00058 13.2292 3 12.7924 3 12.15V11.25C3 10.8358 2.66421 10.5 2.25 10.5C1.83579 10.5 1.5 10.8358 1.5 11.25L1.5 12.181C1.49999 12.7847 1.49998 13.283 1.53315 13.6889C1.56759 14.1104 1.64151 14.498 1.82698 14.862C2.1146 15.4265 2.57354 15.8854 3.13803 16.173C3.50203 16.3585 3.88956 16.4324 4.31113 16.4669C4.71703 16.5 5.2153 16.5 5.81903 16.5ZM8.46967 11.7803C8.76256 12.0732 9.23744 12.0732 9.53033 11.7803L13.2803 8.03033C13.5732 7.73744 13.5732 7.26256 13.2803 6.96967C12.9874 6.67678 12.5126 6.67678 12.2197 6.96967L9.75 9.43934V2.25C9.75 1.83579 9.41421 1.5 9 1.5C8.58579 1.5 8.25 1.83579 8.25 2.25V9.43934L5.78033 6.96967C5.48744 6.67678 5.01256 6.67678 4.71967 6.96967C4.42678 7.26256 4.42678 7.73744 4.71967 8.03033L8.46967 11.7803Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_442_6035'%3E%3Crect width='18' height='18' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.bem-portfolio__icon--arrow-right {
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='19' viewBox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_434_4820)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.84467 2.51374C6.13756 2.22084 6.61244 2.22084 6.90533 2.51374L13.2803 8.88874C13.5732 9.18163 13.5732 9.6565 13.2803 9.9494L6.90533 16.3244C6.61244 16.6173 6.13756 16.6173 5.84467 16.3244C5.55178 16.0315 5.55178 15.5566 5.84467 15.2637L11.6893 9.41907L5.84467 3.5744C5.55178 3.2815 5.55178 2.80663 5.84467 2.51374Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_434_4820'%3E%3Crect width='18' height='18' fill='white' transform='translate(0 0.419067)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.bem-portfolio__icon--message {
+  background-image: url('data:image/svg+xml,<svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 15.8381C13.1421 15.8381 16.5 12.8161 16.5 9.08813C16.5 5.36021 13.1421 2.33813 9 2.33813C4.85786 2.33813 1.5 5.36021 1.5 9.08813C1.5 10.6356 2.07862 12.0615 3.05177 13.2001L2.61076 14.3761C2.26649 15.2941 2.09436 15.7532 2.19619 16.0187C2.28444 16.2489 2.48011 16.4209 2.71962 16.4791C2.99602 16.5461 3.42929 16.3167 4.29582 15.858L5.66232 15.1346C6.66754 15.5849 7.80091 15.8381 9 15.8381Z" fill="white"/></svg>');
+}/*# sourceMappingURL=portfolio.css.map */
