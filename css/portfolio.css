@@ -258,6 +258,9 @@ img {
 .bem-portfolio__paragraph--mb30 {
   padding-block-end: 1.875rem;
 }
+.bem-portfolio__paragraph--mb20 {
+  padding-block-end: 1.25rem;
+}
 .bem-portfolio__paragraph--p0 {
   padding: 0rem;
 }
@@ -285,6 +288,9 @@ img {
 }
 .bem-portfolio__workinner--teal {
   background-color: var(--bem-Teal);
+}
+.bem-portfolio__workinner--lightteal {
+  background-color: var(--bem-LightTeal);
 }
 .bem-portfolio__workinner--col {
   flex-direction: column;
@@ -458,6 +464,9 @@ img {
 }
 .bem-portfolio__workpthumbimg {
   border: 2px solid var(--bem-White);
+}
+.bem-portfolio__paragraphbold {
+  font-weight: var(--bem-BoldFW);
 }
 .bem-portfolio__icon {
   inline-size: 1.125rem;

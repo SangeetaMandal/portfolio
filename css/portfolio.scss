@@ -195,6 +195,9 @@
     &--mb30 {
       @include toRem(padding-block-end, 30);
     }
+    &--mb20 {
+      @include toRem(padding-block-end, 20);
+    }
     &--p0 {
       @include toRem(padding, 0);
     }
@@ -230,6 +233,9 @@
     }
     &--teal {
       background-color: var(--bem-Teal);
+    }
+    &--lightteal {
+      background-color: var(--bem-LightTeal);
     }
     &--col {
       flex-direction: column;
@@ -417,6 +423,9 @@
   }
   &__workpthumbimg{
     border: 2px solid var(--bem-White);
+  }
+  &__paragraphbold{
+    font-weight: var(--bem-BoldFW);
   }
   &__icon {
     @include toRem(inline-size, 18);
