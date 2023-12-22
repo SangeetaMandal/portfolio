@@ -2,57 +2,103 @@
 @import "scss/global";
 
 .bem-portfolio {
-  --bem-HeadingFF: "Montserrat", sans-serif;
-  --bem-BodyFF: "Lato", sans-serif;
-  --bem-Green: hsl(154, 50%, 35%);
-  --bem-DarkBlue: hsl(184, 96%, 27%);
-  --bem-LightViolet: hsl(252, 100%, 93%);
-  --bem-LightTeal: hsl(144, 78%, 81%);
-  --bem-Teal: hsl(159, 73%, 62%);
-  --bem-Black: hsl(0, 0%, 16%);
-  --bem-DarkGrey1: hsl(0, 0%, 24%);
-  --bem-DarkGrey2: hsl(0, 0%, 60%);
-  --bem-LightGrey1: hsl(0, 0%, 77%);
-  --bem-LightGrey2: hsl(0, 0%, 95%);
-  --bem-White: hsl(0, 0%, 100%);
-  --bem-LightFW: 300;
-  --bem-RegularFW: 400;
-  --bem-MediumFW: 500;
-  --bem-SemiboldFW: 600;
-  --bem-BoldFW: 700;
   &__header {
     background-color: var(--bem-Green);
     &--padding-blocks {
       @include toRem(padding-block-start, 20);
       @include toRem(padding-block-end, 20);
+      @media screen and (max-width: 767px) {
+        @include toRem(padding-block-start, 10);
+        @include toRem(padding-block-end, 10);
+      }
     }
   }
   &__blocks {
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     inline-size: 100%;
+    @include toRem(padding-inline-start, 10);
+    @include toRem(padding-inline-end, 10);
     @include toRem(max-inline-size, 1200);
+    @media screen and (max-width: 1200px) {
+      max-inline-size: 95%;
+    }
+    &--fdrowl {
+      flex-direction: row;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
     &--fdcol {
       flex-direction: column;
     }
-    
+    &--fdrowc {
+      flex-direction: row;
+    }
   }
   &__logoimg {
     @include toRem(max-height, 58);
+    @media screen and (max-width: 767px) {
+      @include toRem(max-height, 35);
+    }
+  }
+  &__navwrap {
+    display: flex;
+    flex-direction: row;
+    @include toRem(gap, 20);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @media screen and (max-width: 767px) {
+      @include toRem(gap, 10);
+    }
+  }
+  &__button {
+    background-color: transparent;
+    border: 0;
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+  &__buttonimg {
+    @include toRem(inline-size, 32);
+  }
+  &__nav {
+    display: flex;
+    @media screen and (max-width: 767px) {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 124%;
+      background: var(--bem-White);
+      width: 200px;
+    }
   }
   &__navul {
     display: flex;
     flex-direction: row;
     @include toRem(gap, 25);
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+      @include toRem(padding, 10);
+      @include toRem(gap, 10);
+    }
+    @media screen and (max-width: 767px) {
+      @include toRem(gap, 16);
+    }
   }
   &__navli {
     list-style: none;
     display: flex;
     flex-direction: row;
     align-items: center;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
   }
   &__navlink {
     font-weight: var(--bem-BoldFW);
@@ -60,6 +106,12 @@
     border-bottom: 1px solid transparent;
     &--select {
       border-bottom: 1px solid var(--bem-White);
+    }
+    @media screen and (max-width: 767px) {
+      @include toRem(font-size, 14);
+    }
+    @media screen and (max-width: 767px) {
+      color: var(--bem-black);
     }
   }
   &__buttonblack {
@@ -88,6 +140,11 @@
         background-color: var(--bem-Green);
         border: 2px solid var(--bem-Green);
       }
+    }
+    @media screen and (max-width: 767px) {
+      @include toRem(font-size, 14);
+      @include toRem(padding-inline-start, 20);
+      @include toRem(padding-inline-end, 20);
     }
   }
   &__buttonwhiteborder {
@@ -121,11 +178,26 @@
     justify-content: center;
     align-items: flex-start;
     @include toRem(gap, 25);
+    @include toRem(padding-block-start, 40);
+    @include toRem(padding-block-end, 40);
+    @media screen and (max-width: 640px) {
+      @include toRem(gap, 5);
+      @include toRem(padding-block-start, 20);
+      @include toRem(padding-block-end, 20);
+    }
   }
   &__bannerimg {
     flex: 0 0 35%;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 640px) {
+      @include toRem(padding-block-end, 20);
+    }
+  }
+  &__bannerinner &__blocks--fdrowl {
+    @media screen and (min-width: 641px) {
+      flex-direction: row;
+    }
   }
   &__heading1 {
     @include toRem(font-size, 48);
@@ -134,6 +206,12 @@
     }
     &--black {
       color: var(--bem-black);
+    }
+    @media screen and (max-width: 1200px) {
+      @include toRem(font-size, 38);
+    }
+    @media screen and (max-width: 767px) {
+      @include toRem(font-size, 36);
     }
   }
   &__heading2 {
@@ -147,6 +225,12 @@
     &--textcenter {
       text-align: center;
     }
+    @media screen and (max-width: 1200px) {
+      @include toRem(font-size, 36);
+    }
+    @media screen and (max-width: 767px) {
+      @include toRem(font-size, 32);
+    }
   }
   &__heading3 {
     @include toRem(font-size, 32);
@@ -155,6 +239,12 @@
     }
     &--black {
       color: var(--bem-black);
+    }
+    @media screen and (max-width: 1200px) {
+      @include toRem(font-size, 28);
+    }
+    @media screen and (max-width: 767px) {
+      @include toRem(font-size, 24);
     }
   }
   &__heading4 {
@@ -165,6 +255,12 @@
     &--black {
       color: var(--bem-black);
     }
+    @media screen and (max-width: 1200px) {
+      @include toRem(font-size, 22);
+    }
+    @media screen and (max-width: 767px) {
+      @include toRem(font-size, 20);
+    }
   }
   &__heading5 {
     @include toRem(font-size, 20);
@@ -173,6 +269,12 @@
     }
     &--black {
       color: var(--bem-black);
+    }
+    @media screen and (max-width: 1200px) {
+      @include toRem(font-size, 18);
+    }
+    @media screen and (max-width: 767px) {
+      @include toRem(font-size, 16);
     }
   }
   &__heading6 {
@@ -194,9 +296,15 @@
     }
     &--mb30 {
       @include toRem(padding-block-end, 30);
+      @media screen and (max-width: 767px) {
+        @include toRem(padding-block-end, 16);
+      }
     }
     &--mb20 {
       @include toRem(padding-block-end, 20);
+      @media screen and (max-width: 767px) {
+        @include toRem(padding-block-end, 16);
+      }
     }
     &--p0 {
       @include toRem(padding, 0);
@@ -206,6 +314,9 @@
     }
     &--textcenter {
       text-align: center;
+    }
+    &--copyright {
+      @include toRem(font-size, 14);
     }
   }
 
@@ -220,6 +331,9 @@
   &__skillwrap,
   &__contactwrap {
     @include toRem(margin-block-end, 40);
+    @media screen and (max-width: 767px) {
+      @include toRem(margin-block-end, 20);
+    }
   }
 
   &__workinner {
@@ -240,12 +354,20 @@
     &--col {
       flex-direction: column;
     }
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+      @include toRem(padding, 16);
+      @include toRem(gap, 16);
+    }
   }
   &__worksampleimg {
-    flex: 0 0 500px;
+    flex: 1 1 500px;
     display: flex;
-    flex-wrap: wrap;
     @include toRem(gap, 20);
+    @include toRem(max-inline-size, 500);
+    @media screen and (max-width: 640px) {
+      flex: 0 0 100%;
+    }
   }
   &__workthumbimg {
     block-size: auto;
@@ -254,6 +376,9 @@
     display: flex;
     flex-direction: column;
     @include toRem(gap, 20);
+    @media screen and (max-width: 640px) {
+      flex: 1 1 calc(50% - 20px);
+    }
   }
   &__buttonwrap {
     display: flex;
@@ -266,16 +391,30 @@
     @include toRem(padding-inline-end, 170);
     @include toRem(padding-block-start, 30);
     @include toRem(padding-block-end, 30);
+    @include toRem(max-inline-size, 914);
     display: flex;
     flex-direction: column;
-    @include toRem(gap, 15);
-    flex: 0 0 914px;
+    @include toRem(gap, 16);
+    flex: 1 1 914px;
+    @media screen and (max-width: 767px) {
+      flex: 0 0 100%;
+      @include toRem(padding, 16);
+      @include toRem(padding-block-end, 60);
+      @include toRem(gap, 0);
+    }
   }
   &__aboutimgwrap {
     @include toRem(margin-inline-start, -170);
+    @media screen and (max-width: 767px) {
+      @include toRem(margin-inline-start, 0);
+      @include toRem(margin-block-start, -60);
+      flex: 0 0 80%;
+    }
   }
   &__aboutimg {
     border: 10px solid var(--bem-DarkBlue);
+    inline-size: 60%;
+    margin: 0 auto;
   }
   &__skillwrap {
     background-color: var(--bem-LightViolet);
@@ -289,6 +428,11 @@
     @include toRem(gap, 30);
     justify-content: center;
     @include toRem(padding-block-end, 30);
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+      @include toRem(gap, 16);
+      @include toRem(padding-block-end, 16);
+    }
   }
   &__skill {
     display: flex;
@@ -300,13 +444,29 @@
     align-items: center;
     background-color: var(--bem-White);
     border: 2px solid var(--bem-Black);
+    @media screen and (max-width: 767px) {
+      @include toRem(padding, 10);
+    }
+  }
+  &__skill &__paragraph {
+    @media screen and (max-width: 767px) {
+      @include toRem(font-size, 14);
+    }
   }
   &__contactwrap {
     background-color: var(--bem-LightTeal);
-    @include toRem(inline-size, 800);
+    @include toRem(max-inline-size, 800);
     @include toRem(padding, 30);
     margin: 0 auto;
     @include toRem(margin-block-end, 40);
+    inline-size: 100%;
+    @media screen and (max-width: 767px) {
+      inline-size: calc(100% - 30px);
+      @include toRem(padding-inline-start, 0);
+      @include toRem(padding-inline-end, 0);
+      @include toRem(padding-block-start, 16);
+      @include toRem(padding-block-end, 16);
+    }
   }
   &__contactform {
     display: flex;
@@ -317,18 +477,20 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    @include toRem(gap, 20);
+    gap: 10%;
     @include toRem(margin-block-end, 20);
     align-items: center;
     &--m0 {
       @include toRem(margin-block-end, 0);
     }
+    @media screen and (max-width: 767px) {
+    }
   }
   &__contactformlabel {
-    flex: 0 0 90px;
+    flex: 0 0 20%;
   }
   &__contactforminput {
-    flex: 0 0 calc(100% - 110px);
+    flex: 0 0 70%;
     @include toRem(block-size, 40);
     @include toRem(padding, 5);
     border: 1px solid var(--bem-LightGrey1);
@@ -397,6 +559,8 @@
     @include toRem(gap, 10);
     justify-content: center;
     align-items: center;
+    @include toRem(padding-inline-start, 16);
+    @include toRem(padding-inline-end, 16);
   }
   &__socialwrap {
     display: flex;
@@ -414,17 +578,23 @@
     @include toRem(gap, 30);
     justify-content: center;
     align-items: flex-start;
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
   }
   &__workthumbleft,
   &__workthumbright {
     @include toRem(gap, 30);
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 767px) {
+      @include toRem(gap, 16);
+    }
   }
-  &__workpthumbimg{
+  &__workpthumbimg {
     border: 2px solid var(--bem-White);
   }
-  &__paragraphbold{
+  &__paragraphbold {
     font-weight: var(--bem-BoldFW);
   }
   &__icon {

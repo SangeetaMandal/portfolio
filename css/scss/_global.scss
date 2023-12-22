@@ -41,12 +41,12 @@ h5,
 h6 {
   font-family: var(--bem-HeadingFF);
   font-weight: var(--bem-SemiboldFW);
-  @include toRem(padding-block-end, 15);
+  @include toRem(padding-block-end, 16);
 }
 p {
   font-family: var(--bem-BodyFF);
   font-weight: var(--bem-RegularFW);
-  @include toRem(padding-block-end, 15);
+  @include toRem(padding-block-end, 16);
 }
 ul,
 li,

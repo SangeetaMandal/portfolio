@@ -13,12 +13,16 @@
   <!-- Block start here -->
   <section class="bem-portfolio">
     <header class="bem-portfolio__header bem-portfolio__header--padding-blocks">
-      <div class="bem-portfolio__blocks">
+      <div class="bem-portfolio__blocks bem-portfolio__blocks--fdrowc">
         <div class="bem-portfolio__logo">
-          <a href="" class="bem-portfolio__logolink"><img class="bem-portfolio__logoimg" src="images/Logo.png" alt="logo" /></a>
+          <a href="" class="bem-portfolio__logolink"><img class="bem-portfolio__logoimg" src="images/Logo.png"
+              alt="logo" /></a>
         </div>
         <div class="bem-portfolio__navwrap">
-          <nav class="bem-portfolio__nav">
+          <a class="bem-portfolio__button menuclick">
+            <img src="images/menu.svg" alt="menu" class="bem-portfolio__buttonimg" />
+          </a>
+          <nav class="bem-portfolio__nav menulist">
             <ul class="bem-portfolio__navul">
               <li class="bem-portfolio__navli">
                 <a href="" class="bem-portfolio__navlink bem-portfolio__navlink--select">Home</a>
@@ -35,19 +39,20 @@
               <li class="bem-portfolio__navli">
                 <a href="#contact" class="bem-portfolio__navlink">Contact</a>
               </li>
-              <li class="bem-portfolio__navli">
-                <a href="documents/Resume-Sangeeta-Mandal.pdf" download="download" class="bem-portfolio__buttonblack">Download Resume
-                  <i class="bem-portfolio__icon bem-portfolio__icon--download"></i>
-                </a>
-              </li>
             </ul>
           </nav>
+          <div class="bem-portfolio__buttonwrap">
+            <a href="documents/Resume-Sangeeta-Mandal.pdf" download="download"
+              class="bem-portfolio__buttonblack">Download Resume
+              <i class="bem-portfolio__icon bem-portfolio__icon--download"></i>
+            </a>
+          </div>
         </div>
       </div>
     </header>
-    <section class="bem-portfolio__banner bem-portfolio__banner--margintop">
+    <section class="bem-portfolio__banner bem-portfolio__banner--paddingtop">
       <div class="bem-portfolio__bannerinner">
-        <div class="bem-portfolio__blocks">
+        <div class="bem-portfolio__blocks bem-portfolio__blocks--fdrowl">
           <div class="bem-portfolio__bannercaption">
             <h1 class="bem-portfolio__heading1 bem-portfolio__heading1--white">
               Hey, I am a UI/UX Designer
@@ -63,16 +68,17 @@
             </div>
           </div>
           <div class="bem-portfolio__bannerimg">
-            <img src="images/homebannerimg.png" alt="home banner img"/>
+            <img src="images/homebannerimg.png" alt="home banner img" />
           </div>
         </div>
       </div>
     </section>
-    <section class="bem-portfolio__workwrap"  id="works">
-      <div class="bem-portfolio__blocks">
+    <section class="bem-portfolio__workwrap" id="works">
+      <div class="bem-portfolio__blocks bem-portfolio__blocks--fdrowl">
         <div class="bem-portfolio__workinner bem-portfolio__workinner--lightgrey2">
           <div class="bem-portfolio__worksampleimg">
-            <img src="images/work-thumbnail1.png" alt="work-thumbnail" class="bem-portfolio__workthumbimg" />
+            <div class="bem-portfolio__worksamplerightimg"><img src="images/work-thumbnail1.png" alt="work-thumbnail"
+                class="bem-portfolio__workthumbimg" /></div>
             <div class="bem-portfolio__worksamplerightimg">
               <img src="images/work-thumbnail2.png" alt="work-thumbnail" class="bem-portfolio__workthumbimg" />
               <img src="images/work-thumbnail3.png" alt="work-thumbnail" class="bem-portfolio__workthumbimg" />
@@ -99,7 +105,8 @@
               of plants so the user can grow their knowledge.
             </p>
             <div class="bem-portfolio__buttonwrap">
-              <a href="/work.html" class="bem-portfolio__buttonblack bem-portfolio__buttonblack--borderb">Read Case Study
+              <a href="/work.html" class="bem-portfolio__buttonblack bem-portfolio__buttonblack--borderb">Read Case
+                Study
                 <i class="bem-portfolio__icon bem-portfolio__icon--arrow-right"></i>
               </a>
             </div>
@@ -108,7 +115,7 @@
       </div>
     </section>
     <section class="bem-portfolio__aboutwrap" id="about">
-      <div class="bem-portfolio__blocks">
+      <div class="bem-portfolio__blocks bem-portfolio__blocks--fdrowl">
         <div class="bem-portfolio__about">
           <h2 class="bem-portfolio__heading2 bem-portfolio__heading2--white">
             Hi there, I’m Sangeeta.
@@ -326,7 +333,7 @@
     </section>
     <footer class="bem-portfolio__footer">
       <div class="bem-portfolio__footerinner">
-        <p class="bem-portfolio__paragraph bem-portfolio__paragraph--white bem-portfolio__paragraph--textcenter bem-portfolio__paragraph--p0">Copyright &copy; 2023 Sangeeta Mandal. All rights reserved.</p>
+        <p class="bem-portfolio__paragraph bem-portfolio__paragraph--white bem-portfolio__paragraph--textcenter bem-portfolio__paragraph--p0 bem-portfolio__paragraph--copyright">Copyright &copy; 2023 Sangeeta Mandal. All rights reserved.</p>
         <ul class="bem-portfolio__socialwrap">
           <li class="bem-portfolio__socialicon">
             <a href="https://www.linkedin.com/in/mandalsangeeta/" target="_blank" class="bem-portfolio__socialiconlink"><img src="images/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
@@ -346,5 +353,13 @@
   </section>
   <!-- Block start end -->
 </body>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".menuclick").click(function () {
+      $(".menulist").toggle();
+    });
+  });
+</script>
 
 </html>

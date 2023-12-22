@@ -13,12 +13,15 @@
   <!-- Block start here -->
   <section class="bem-portfolio">
     <header class="bem-portfolio__header bem-portfolio__header--padding-blocks">
-      <div class="bem-portfolio__blocks">
+      <div class="bem-portfolio__blocks bem-portfolio__blocks--headerinner ">
         <div class="bem-portfolio__logo">
           <a href="" class="bem-portfolio__logolink"><img class="bem-portfolio__logoimg" src="images/Logo.png" alt="logo" /></a>
         </div>
         <div class="bem-portfolio__navwrap">
-          <nav class="bem-portfolio__nav">
+          <a class="bem-portfolio__button menuclick">
+            <img src="images/menu.svg" alt="menu" class="bem-portfolio__buttonimg" />
+          </a>
+          <nav class="bem-portfolio__nav menulist">
             <ul class="bem-portfolio__navul">
               <li class="bem-portfolio__navli">
                 <a href="/index.html" class="bem-portfolio__navlink">Home</a>
@@ -35,19 +38,20 @@
               <li class="bem-portfolio__navli">
                 <a href="/index.html#contact" class="bem-portfolio__navlink">Contact</a>
               </li>
-              <li class="bem-portfolio__navli">
-                <a href="documents/Resume-Sangeeta-Mandal.pdf" download="download" class="bem-portfolio__buttonblack">Download Resume
-                  <i class="bem-portfolio__icon bem-portfolio__icon--download"></i>
-                </a>
-              </li>
             </ul>
           </nav>
+          <div class="bem-portfolio__buttonwrap">
+            <a href="documents/Resume-Sangeeta-Mandal.pdf" download="download"
+              class="bem-portfolio__buttonblack">Download Resume
+              <i class="bem-portfolio__icon bem-portfolio__icon--download"></i>
+            </a>
+          </div>
         </div>
       </div>
     </header>
-    <section class="bem-portfolio__banner bem-portfolio__banner--margintop">
+    <section class="bem-portfolio__banner bem-portfolio__banner--paddingtop">
       <div class="bem-portfolio__bannerinner">
-        <div class="bem-portfolio__blocks">
+        <div class="bem-portfolio__blocks bem-portfolio__blocks--fdrowl">
           <div class="bem-portfolio__bannercaption">
             <h1 class="bem-portfolio__heading1 bem-portfolio__heading1--white">
               Plant's Daily Take-Care Routine
@@ -63,7 +67,7 @@
       </div>
     </section>
     <section class="bem-portfolio__workwrap"  id="works">
-      <div class="bem-portfolio__blocks">
+      <div class="bem-portfolio__blocks bem-portfolio__blocks--fdrowl">
         <div class="bem-portfolio__workinner bem-portfolio__workinner--lightteal bem-portfolio__workinner--col">
           <div class="bem-portfolio__workcontent">
             <h6 class="bem-portfolio__heading6 bem-portfolio__heading6--black">
@@ -130,6 +134,14 @@
     </footer>
   </section>
   <!-- Block start end -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".menuclick").click(function () {
+      $(".menulist").toggle();
+    });
+  });
+</script>
 </body>
 
 </html>
